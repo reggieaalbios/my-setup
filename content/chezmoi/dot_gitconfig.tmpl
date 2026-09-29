@@ -1,0 +1,21 @@
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[diff]
+    algorithm = histogram
+    colorMoved = default
+[status]
+    short = true
+[rerere]
+    enabled = true
+{{ if and (hasKey . "gitName") (hasKey . "gitEmail") -}}
+[user]
+    name = {{ .gitName | quote }}
+    email = {{ .gitEmail | quote }}
+{{ end -}}

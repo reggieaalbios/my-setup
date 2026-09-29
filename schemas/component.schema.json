@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reggieaalbios/my-setup/schemas/component.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "name", "category", "platforms", "minimum_engine_version"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "category": { "enum": ["CLI Tools", "GUI Applications"] },
+    "platforms": { "type": "array", "items": { "enum": ["windows"] }, "minItems": 1, "uniqueItems": true },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string" }, "scope": { "enum": ["user", "machine"] },
+        "detect": { "type": "array", "items": { "type": "string" } },
+        "verify": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "destinations", "targets"],
+      "properties": {
+        "source": { "type": "string" },
+        "destinations": { "type": "array", "items": { "type": "string" } },
+        "targets": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "verify": { "type": "array", "items": { "type": "string" } },
+        "exclusions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "required": { "type": "array", "items": { "type": "string" } },
+    "recommended": { "type": "array", "items": { "type": "string" } },
+    "minimum_engine_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+  },
+  "anyOf": [{ "required": ["package"] }, { "required": ["config"] }]
+}

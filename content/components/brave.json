@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"brave","name":"Brave","category":"GUI Applications","platforms":["windows"],"package":{"id":"Brave.Brave","scope":"user","detect":["brave.exe"]},"minimum_engine_version":"0.1.0"}

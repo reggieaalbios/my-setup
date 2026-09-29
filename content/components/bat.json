@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"bat","name":"bat","category":"CLI Tools","platforms":["windows"],"package":{"id":"sharkdp.bat","scope":"user","detect":["bat.exe"],"verify":["bat","--version"]},"minimum_engine_version":"0.1.0"}

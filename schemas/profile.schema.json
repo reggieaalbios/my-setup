@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reggieaalbios/my-setup/schemas/profile.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "selections"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "name": { "enum": ["Custom", "Minimal", "Developer", "Full"] },
+    "description": { "type": "string" },
+    "selections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["package", "config"],
+        "properties": { "package": { "type": "boolean" }, "config": { "type": "boolean" } }
+      }
+    }
+  }
+}

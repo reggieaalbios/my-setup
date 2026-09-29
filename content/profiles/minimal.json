@@ -1,0 +1,1 @@
+{"schema_version":1,"name":"Minimal","description":"PowerShell, Git, and Micro","selections":{"powershell":{"package":true,"config":true},"git":{"package":true,"config":true},"micro":{"package":true,"config":true}}}

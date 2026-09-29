@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"fd","name":"fd","category":"CLI Tools","platforms":["windows"],"package":{"id":"sharkdp.fd","scope":"user","detect":["fd.exe"],"verify":["fd","--version"]},"minimum_engine_version":"0.1.0"}

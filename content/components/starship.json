@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"starship","name":"Starship","category":"CLI Tools","platforms":["windows"],"package":{"id":"Starship.Starship","scope":"user","detect":["starship.exe"],"verify":["starship","--version"]},"config":{"source":"chezmoi/dot_config","destinations":[".config/starship.toml"],"targets":[".config/starship.toml"]},"minimum_engine_version":"0.1.0"}

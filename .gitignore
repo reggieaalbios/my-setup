@@ -1,0 +1,5 @@
+/mysetup
+/.mysetup/
+/dist/
+*.exe
+coverage.out

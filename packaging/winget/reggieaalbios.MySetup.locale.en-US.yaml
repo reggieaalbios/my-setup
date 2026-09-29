@@ -1,0 +1,10 @@
+PackageIdentifier: reggieaalbios.MySetup
+PackageVersion: VERSION
+PackageLocale: en-US
+Publisher: Reggie Aalbios
+PackageName: MySetup
+License: MIT
+ShortDescription: Personal native Windows 11 workstation manager
+PackageUrl: https://github.com/reggieaalbios/my-setup
+ManifestType: defaultLocale
+ManifestVersion: 1.9.0

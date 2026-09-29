@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"ripgrep","name":"ripgrep","category":"CLI Tools","platforms":["windows"],"package":{"id":"BurntSushi.ripgrep.MSVC","scope":"user","detect":["rg.exe"],"verify":["rg","--version"]},"minimum_engine_version":"0.1.0"}

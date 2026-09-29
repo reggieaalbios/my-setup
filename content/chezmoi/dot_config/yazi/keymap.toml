@@ -1,0 +1,14 @@
+[[mgr.prepend_keymap]]
+on = "<Enter>"
+run = "open"
+desc = "Open with the Windows-native opener"
+
+[[mgr.prepend_keymap]]
+on = "<Right>"
+run = "enter"
+desc = "Enter directory"
+
+[[mgr.prepend_keymap]]
+on = "<Left>"
+run = "leave"
+desc = "Leave directory"

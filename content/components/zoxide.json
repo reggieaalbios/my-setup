@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"zoxide","name":"zoxide","category":"CLI Tools","platforms":["windows"],"package":{"id":"ajeetdsouza.zoxide","scope":"user","detect":["zoxide.exe"],"verify":["zoxide","--version"]},"minimum_engine_version":"0.1.0"}

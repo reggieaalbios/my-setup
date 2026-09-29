@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"eza","name":"eza","category":"CLI Tools","platforms":["windows"],"package":{"id":"eza-community.eza","scope":"user","detect":["eza.exe"],"verify":["eza","--version"]},"minimum_engine_version":"0.1.0"}

@@ -1,0 +1,8 @@
+interface:
+  display_name: "MySetup Maintainer"
+  short_description: "Safely maintain captured MySetup changes"
+  default_prompt: "Use $mysetup-maintainer to process the latest explicit MySetup capture report."
+policy:
+  products:
+    - "CODEX"
+  allow_implicit_invocation: false

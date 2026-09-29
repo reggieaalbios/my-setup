@@ -1,0 +1,6 @@
+# Release automation replaces VERSION, URL, and SHA256 and submits the three generated manifests to microsoft/winget-pkgs.
+PackageIdentifier: reggieaalbios.MySetup
+PackageVersion: VERSION
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.9.0

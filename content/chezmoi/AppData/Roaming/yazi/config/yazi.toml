@@ -1,0 +1,17 @@
+[mgr]
+show_hidden = true
+
+[preview]
+max_width = 1200
+max_height = 1200
+image_quality = 75
+
+[opener]
+edit = [{ run = 'pwsh -NoProfile -Command "micro -- $args[0]" "$@"', block = true, desc = "Micro", for = "windows" }]
+open = [{ run = 'pwsh -NoProfile -Command "Start-Process -FilePath $args[0]" "$@"', orphan = true, desc = "Open", for = "windows" }]
+
+[open]
+rules = [
+  { mime = "text/*", use = "edit" },
+  { name = "*", use = "open" },
+]

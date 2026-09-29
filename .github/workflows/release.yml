@@ -1,0 +1,24 @@
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+      - name: Build release assets
+        run: |
+          mkdir -p dist
+          GOOS=windows GOARCH=amd64 go build -trimpath -ldflags "-s -w -X main.version=${GITHUB_REF_NAME#v}" -o dist/mysetup_windows_amd64.exe ./cmd/mysetup
+          GOOS=linux GOARCH=amd64 go build -trimpath -ldflags "-s -w -X main.version=${GITHUB_REF_NAME#v}" -o dist/mysetup_linux_amd64 ./cmd/mysetup
+          (cd dist && sha256sum * > checksums.txt)
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

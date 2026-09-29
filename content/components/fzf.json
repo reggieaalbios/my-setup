@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"fzf","name":"fzf","category":"CLI Tools","platforms":["windows"],"package":{"id":"junegunn.fzf","scope":"user","detect":["fzf.exe"],"verify":["fzf","--version"]},"minimum_engine_version":"0.1.0"}

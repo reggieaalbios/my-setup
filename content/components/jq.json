@@ -1,0 +1,1 @@
+{"schema_version":1,"id":"jq","name":"jq","category":"CLI Tools","platforms":["windows"],"package":{"id":"jqlang.jq","scope":"user","detect":["jq.exe"],"verify":["jq","--version"]},"minimum_engine_version":"0.1.0"}
