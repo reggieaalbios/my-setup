@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated SHA-256 integrity index"
+paths = ['''^content/integrity\.json$''']
